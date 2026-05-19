@@ -3,6 +3,6 @@ public class Main {
    String text1 = Holberton;
    String text2 = School;
 
-   System.out.println($"Welcome to {text1} {text2} !");
+   System.out.println("Welcome to " + text1 " " + text2 + " !");
  }
 }
