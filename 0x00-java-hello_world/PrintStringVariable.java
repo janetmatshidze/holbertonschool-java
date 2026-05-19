@@ -3,5 +3,4 @@ public class Main {
    String text = "Holberton School";
     System.out.println(text);
     System.out.println(text);
-    System.out.println(text.substring(0, 9));
-  }}
+    System.out.println(text.substring(0, 9)); }}
