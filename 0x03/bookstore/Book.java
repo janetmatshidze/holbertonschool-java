@@ -1,4 +1,5 @@
-package exceptions;
+import exceptions.InvalidBookException;
+import exceptions.InvalidAuthorException;
 
 public class Book {
 

@@ -19,7 +19,7 @@ public class Program {
         }
 
         try{
-             GoldEditionBook goldEditionBook1 = new GoldEditionBook (
+             GoldEditionBook goldEditionBook1 = new GoldEditionBook(
                      "Frankenstein",
                      "Mary Shelley",
                      38.30);
@@ -45,7 +45,7 @@ public class Program {
                        goldEditionBook2.getPrice());
 
         } catch ( Exception ex) {
-            System.out.ptintln(ex.getMessage() + "\n");
+            System.out.println(ex.getMessage() + "\n");
         }
 
         try {
