@@ -5,7 +5,7 @@ public class BasicBankAccount {
     private double balance;
     private double annualInterestRate;
 
-    public BasicBankAccount(String accountNumber, double annualInterestRate, double balance){
+    public BasicBankAccount(String accountNumber, double annualInterestRate){
         this.accountNumber = accountNumber;
         this.annualInterestRate = annualInterestRate;
         this.balance = 0;
@@ -13,15 +13,15 @@ public class BasicBankAccount {
 
    // getters
 
-    public getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public getBalance() {
+    public double    getBalance() {
         return balance;
     }
 
-    public getAnnualInterestRate() {
+    public double getAnnualInterestRate() {
         return annualInterestRate;
     }
 
@@ -37,11 +37,28 @@ public class BasicBankAccount {
         if(value <= 0) {
             throw new InvalidOperationException("Withdrawal amount must be greater than 0");
         }
+        if(value > balance) {
+            throw new InvalidOperationException("Withdrawal amount must be less than the current balance");
+        }
         balance -= value;
     }
 
-    // public double calculateMonthlyFee(){
-        
+    public double calculateMonthlyFee(){
+        return Math.min(balance * 0.10, 10.00);
 
-    // }
+    }
+
+    public double calculateMonthlyInterest(){
+        if(balance < 0) {
+            return 0;
+        }
+        return balance * (annualInterestRate / 100) /12;
+    }
+
+    public void applyMonthlyUpdate() {
+        double fee = calculateMonthlyFee();
+        double interest = calculateMonthlyInterest();
+
+        balance = balance - fee + interest;
+    }
 }
