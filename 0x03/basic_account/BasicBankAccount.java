@@ -1,6 +1,7 @@
 import exceptions.InvalidOperationException;
 
 public class BasicBankAccount {
+    
     private String accountNumber;
     private double balance;
     private double annualInterestRate;
@@ -17,7 +18,7 @@ public class BasicBankAccount {
         return accountNumber;
     }
 
-    public double    getBalance() {
+    public double getBalance() {
         return balance;
     }
 
