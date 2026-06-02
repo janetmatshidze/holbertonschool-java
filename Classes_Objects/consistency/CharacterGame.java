@@ -54,8 +54,8 @@ public class CharacterGame {
     public void receiveHealing(int healingAmount) {
      int newHealth = currentHealth + healingAmount;
 
-       if(currentHealth > 100){
-        currentHealth = 100; // cannot exceed 100%
+       if(newHealth > 100){
+        newHealth = 100; // cannot exceed 100%
        }
        setCurrentHealth(newHealth);
     }
