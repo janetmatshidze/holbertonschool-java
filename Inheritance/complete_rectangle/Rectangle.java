@@ -36,13 +36,12 @@
 
   @Override
    public double area() throws UnsupportedOperationException {
-    
-    double area = height * width;
+    return height * width;
 
-     return area;
    }
-   
+
+   @Override
    public String toString() {
-    return String.format("[Rectangle]  %.2f / %.2f", width, height);
+    return String.format("[Rectangle] %.2f / %.2f", width, height);
    }
 }
