@@ -1,5 +1,10 @@
+import java.util.Locale;
+
 public class Program {
         public static void main(String[] args) {
+
+            Locale.setDefault(Locale.FRANCE);
+            
             products.Book book1 = new products.Book("Dune", 2017, "United States", 56.30, 680, "Frank Herbert", 1);
             products.Book book2 = new products.Book("One of Us Is Lying", 2018, "United States", 34.93, 384,
                     "Karen McManus", 1);
